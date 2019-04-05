@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+<script>
+
+$(document).ready(function(){
+
+	$('#mltask').on('change', function(){
+	   console.log($('#mltask').val());
+		$('#mlalg').html('');
+		if($('#mltask').val()==15){
+			$('#mlalg').append('<option value="Linear SVM">Linear SVM</option>');
+			$('#mlalg').append('<option value="Logestic Regression">Logestic Regression</option>');
+
+		}else{
+			$('#mlalg').append('<option value="K-means">K-means</option>');
+			$('#mlalg').append('<option value="Gaussion Mixture Model">Gaussion Mixture Model</option>');
+		}
+	});
+
+
+});
+</script>
+<br>ML Task<br>
+	<select id="mltask">
+	  <option value="15">Clasification</option>
+		<option value="20">Clustering</option>
+	</select>
+
+
+	<br>ML Algorithm<br>
+		<select id="mlalg", name='alg'>
+			<option value="Linear SVM">Linear SVM</option>
+		  <option value="Logestic Regression">Logestic Regression</option>
+
+		</select>
+
+<form method="post" action="/">
+
+                <input type="submit" value="Encrypt" name="Encrypt"/>
+                <input type="submit" value="Decrypt" name="Decrypt" />
+
+            </div>
+        </form>
+
+</body>
+</html>
